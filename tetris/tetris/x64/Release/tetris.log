@@ -1,0 +1,2 @@
+﻿MSVCRT.lib(exe_winmain.obj) : error LNK2001: nierozpoznany symbol zewnętrzny WinMain
+C:\Users\PC\Desktop\tetris\tetris\x64\Release\tetris.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 1
