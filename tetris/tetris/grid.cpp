@@ -43,7 +43,72 @@ void Grid::Draw()
 		for (int column = 0; column < NumCols; column++)
 		{
 			int cellValue = grid[row][column];
-			DrawRectangle(column * CellSize+1, row * CellSize+1, CellSize-1, CellSize-1, colors[cellValue]);
+			DrawRectangle(column * CellSize+11, row * CellSize+11, CellSize-1, CellSize-1, colors[cellValue]);
 		}
+	}
+}
+
+bool Grid::iscelloutside(int row, int column)
+{
+	if (row >= 0 && row < NumRows && column >= 0 && column < NumCols)
+	{
+		return false;
+	}
+	return true;
+}
+
+bool Grid::iscellempty(int row, int column)
+{
+	if (grid[row][column] == 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+int Grid::clearfullrows()
+{
+	int completed = 0;
+	for (int row = NumRows - 1; row >= 0; row--)
+	{
+		if (isrowfull(row))
+		{
+			clearrow(row);
+			completed++;
+		}
+		else if (completed > 0)
+		{
+			moverowdown(row, completed);
+		}
+	}
+	return completed;
+}
+
+bool Grid::isrowfull(int row)
+{
+	for (int column = 0; column < NumCols; column++)
+	{
+		if (grid[row][column] == 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+void Grid::clearrow(int row)
+{
+	for (int column = 0; column < NumCols; column++)
+	{
+		grid[row][column] = 0;
+	}
+}
+
+void Grid::moverowdown(int row, int numrows)
+{
+	for (int column = 0; column < NumCols; column++)
+	{
+		grid[row + numrows][column] = grid[row][column];
+		grid[row][column] = 0;
 	}
 }

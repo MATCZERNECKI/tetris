@@ -9,12 +9,12 @@ Block::Block()
 	columnoffset = 0;
 }
 
-void Block::Draw()
+void Block::Draw(int offsetx, int offsety)
 {
 	std::vector<Position> tiles = getcellpositions();
 	for (Position item : tiles)
 	{
-		DrawRectangle(item.column * cellsize + 1, item.row *cellsize + 1, cellsize - 1, cellsize - 1, colors[id]);
+		DrawRectangle(item.column * cellsize + offsetx, item.row *cellsize + offsety, cellsize - 1, cellsize - 1, colors[id]);
 	}
 }
 
@@ -34,4 +34,22 @@ std::vector<Position> Block::getcellpositions()
 		movedtiles.push_back(newpos);
 	}
 	return movedtiles;
-};
+}
+
+void Block::Rotate()
+{
+	rotationstate++;
+	if (rotationstate == (int)cells.size())
+	{
+		rotationstate = 0;
+	}
+}
+
+void Block::UndoRotation()
+{
+	rotationstate--;
+	if (rotationstate == -1)
+	{
+		rotationstate = cells.size() - 1;
+	}
+}

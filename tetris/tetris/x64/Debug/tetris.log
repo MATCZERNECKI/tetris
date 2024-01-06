@@ -1,5 +1,8 @@
-﻿  blocks.cpp
+﻿  game.cpp
+C:\Users\PC\Desktop\tetris\tetris\tetris\game.cpp(20,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
   main.cpp
+C:\Users\PC\Desktop\tetris\tetris\tetris\main.cpp(44,46): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\PC\Desktop\tetris\tetris\tetris\main.cpp(49,48): warning C4305: "argument": obcięcie z "double" do "float"
   Generowanie kodu...
   tetris.vcxproj -> C:\Users\PC\Desktop\tetris\tetris\x64\Debug\tetris.exe
   'pwsh.exe' is not recognized as an internal or external command,
