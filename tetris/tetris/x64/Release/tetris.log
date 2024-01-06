@@ -1,2 +1,14 @@
-﻿MSVCRT.lib(exe_winmain.obj) : error LNK2001: nierozpoznany symbol zewnętrzny WinMain
+﻿  block.cpp
+C:\Users\PC\Desktop\tetris\tetris\tetris\block.cpp(53,32): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
+  blocks.cpp
+  colors.cpp
+  game.cpp
+C:\Users\PC\Desktop\tetris\tetris\tetris\game.cpp(20,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  grid.cpp
+  main.cpp
+C:\Users\PC\Desktop\tetris\tetris\tetris\main.cpp(44,46): warning C4305: "argument": obcięcie z "double" do "float"
+C:\Users\PC\Desktop\tetris\tetris\tetris\main.cpp(49,48): warning C4305: "argument": obcięcie z "double" do "float"
+  position.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1134,5): error MSB6006: Polecenie „link.exe” zakończone przez kod 1120.
+MSVCRT.lib(exe_winmain.obj) : error LNK2001: nierozpoznany symbol zewnętrzny WinMain
 C:\Users\PC\Desktop\tetris\tetris\x64\Release\tetris.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 1
