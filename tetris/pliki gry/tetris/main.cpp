@@ -29,7 +29,7 @@ int main()
 	while (WindowShouldClose() == false)
 	{
 		game.HandleInput();
-		if (eventtriggered(0.2))
+		if (eventtriggered(0.4))
 		{
 			game.movedown();
 		}

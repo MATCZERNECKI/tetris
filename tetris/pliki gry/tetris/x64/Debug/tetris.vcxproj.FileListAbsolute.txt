@@ -1,1 +1,2 @@
 C:\Users\PC\Desktop\tetris\tetris\tetris\x64\Debug\tetris.vcxproj.CopyComplete
+C:\Users\PC\Desktop\tetris\tetris\pliki gry\tetris\x64\Debug\tetris.vcxproj.CopyComplete
